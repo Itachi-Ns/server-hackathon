@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend for Thames Showcase",
+  "keywords": [
+    "node",
+    "express",
+    "mongo",
+    "MERN"
+  ],
+  "license": "ISC",
+  "author": "Nirbhik",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch index.js",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
