@@ -14,7 +14,7 @@
 // }); 
 
 import express from "express"
-import router from "./routes/projectRoutes.js"
+import projectRoutes from "./routes/projectRoutes.js"
 import router2 from "./routes/teamRoutes.js"
 import mongoose from "mongoose"
 
@@ -42,7 +42,7 @@ app.get("/", (req, res) =>{
 
 //get, post, delete, patch, put
 
-app.use("/projects", router)
+app.use("/projects", projectRoutes)
 app.use("/teams", router2)
 
 app.listen(PORT, () => {

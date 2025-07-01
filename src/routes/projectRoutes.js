@@ -2,17 +2,15 @@ import {Router} from "express"
 import mongoose from "mongoose"
 import Project from "../models/projects.js"
 
-const router = Router()
+const projectRoutes = Router()
 
 
-router.get("/", (req, res) =>{
+projectRoutes.get("/", (req, res) =>{
   res.send("This is a list of project")
 })
 
-router.post("/", (req, res) =>{
+projectRoutes.post("/", (req, res) =>{
   
-  // res.send(JSON.parse(JSON.stringify(req.body)))
-
   // res.send(req.body)
   // console.log(req.body)
 
@@ -26,8 +24,8 @@ router.post("/", (req, res) =>{
 
 })
 
-router.get("/:id", (req, res) =>{
+projectRoutes.get("/:id", (req, res) =>{
   res.send("This is a projects detail page")
 })
 
-export default router
+export default projectRoutes
