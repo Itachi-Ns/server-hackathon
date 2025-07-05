@@ -1,6 +1,6 @@
 
 import mongoose from "mongoose";
-import env from "../config/env.js"
+import env from "./env.js"
 const {
 	MONGODB_USER,
 	MONGODB_PASSWORD,

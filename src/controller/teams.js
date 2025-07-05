@@ -1,4 +1,4 @@
-import Team from "../models/Team.js";
+import Team from "../models/teams.js";
 
 export const createTeam = async (req, res) => {
 	try {

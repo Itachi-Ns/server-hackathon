@@ -1,27 +1,39 @@
 import {Router} from "express"
 import Team from "../models/teams.js"
+import {
+	createTeam,
+	getAllTeams,
+} from "../controller/teams.js";
 
-const router2 = Router()
 
-router2.get("/", (req, res)=>{
-    res.send("This is the list of teams")
-})
+const router = Router();
 
-router2.post("/", (req, res) => {
-    const reqData = req.body
-    res.json({
-		...reqData, message: "Team has been created"
-	})
+// const teamRoutes = Router()
 
-    const team1 = new Team({name: "TeamDemo"})
-    team1.save()
-})
+// teamRoutes.get("/", (req, res)=>{
+//     res.send("This is the list of teams")
+// })
 
-router2.get("/:id", (req, res) => {
-    res.send("This is a teams detail page")
+// teamRoutes.post("/", (req, res) => {
+//     const reqData = req.body
+//     res.json({
+// 		...reqData, message: "Team has been created"
+// 	})
 
-    const team2 = new Team({name: "Ram"})
-    team2.save()
-})
+//     const team1 = new Team({name: "TeamDemo"})
+//     team1.save()
+// })
 
-export default router2
+// teamRoutes.get("/:id", (req, res) => {
+//     res.send("This is a teams detail page")
+
+//     const team2 = new Team({name: "Ram"})
+//     team2.save()
+// })
+
+router.post("/", createTeam);
+router.get("/", getAllTeams);
+
+// export default teamRoutes
+
+export default router;
