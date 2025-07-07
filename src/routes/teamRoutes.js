@@ -3,6 +3,7 @@ import Team from "../models/teams.js"
 import {
 	createTeam,
 	getAllTeams,
+	getTeamById,
 } from "../controller/teams.js";
 
 
@@ -33,6 +34,8 @@ const router = Router();
 
 router.post("/", createTeam);
 router.get("/", getAllTeams);
+router.get('/:id', getTeamById);	
+
 
 // export default teamRoutes
 

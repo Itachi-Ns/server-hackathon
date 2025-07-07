@@ -14,6 +14,7 @@
 // }); 
 
 import express from "express"
+import cors from "cors";
 import projectRoutes from "./routes/projectRoutes.js"
 import teamRoutes from "./routes/teamRoutes.js"
 import mongoose from "mongoose"
@@ -21,6 +22,8 @@ import connectDB from "./config/db.js";
 import env from "./config/env.js"
 
 const app = express()
+app.use(cors())
+
 app.use(express.json())   //Does the parse and stringify
 
 // const PORT = 3000

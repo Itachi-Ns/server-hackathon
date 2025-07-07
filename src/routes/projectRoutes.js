@@ -5,6 +5,9 @@ import Project from "../models/projects.js"
 import {
 	createProject,
 	getAllProjects,
+	deleteProject,
+	getProjectById,
+	updateProject,
 } from "../controller/projects.js";
 
 const router = Router();
@@ -38,6 +41,13 @@ const router = Router();
 
 router.post("/", createProject);
 router.get("/", getAllProjects);
+
+router.get('/', getAllProjects);
+router.get('/:id', getProjectById);
+
+router.post('/', createProject);
+router.put('/:id', updateProject);
+router.delete('/:id', deleteProject);
 
 // export default projectRoutes
 
